@@ -1,0 +1,5 @@
+<h1>Photo #<%= @photo.id %></h1>
+<img src="<%= @photo.image_url %>" alt="<%= @photo.caption %>">
+<p><%= @photo.caption %></p>
+
+<a href="/photos/<%= @photo.id %>/edit">Edit</a>

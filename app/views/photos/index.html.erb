@@ -1,0 +1,9 @@
+<% @photos.each do |photo|%>
+<li>
+  <img src="<%= photo.image_url%>" alt="">
+<%= photo.caption %>
+<a class="btn btn-warning" href="/photos/<%= photo.id %>/Edit">Edit ✎</a>
+<a class="btn btn-danger" href="/photos/<%= photo.id %>/destroy">Destroy ✄</a>
+
+ </li>
+<%end%>
