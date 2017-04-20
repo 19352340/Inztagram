@@ -6,4 +6,5 @@ get('/photos/:id/Edit', {:controller => 'photos', :action => 'edit'})
 get('/update_photo/:id', {:controller => 'photos', :action => 'update'})
 get('/photos', {:controller => 'photos', :action => 'index'})
 get('/photos/:id/destroy', {:controller => 'photos', :action => 'destroy'})
+get('/photos/:id/like', {:controller => 'photos', :action => 'like'})
 end

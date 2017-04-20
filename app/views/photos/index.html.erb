@@ -1,9 +1,26 @@
-<% @photos.each do |photo|%>
-<li>
-  <img src="<%= photo.image_url%>" alt="">
-<%= photo.caption %>
-<a class="btn btn-warning" href="/photos/<%= photo.id %>/Edit">Edit ✎</a>
-<a class="btn btn-danger" href="/photos/<%= photo.id %>/destroy">Destroy ✄</a>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <% @photos.each do |photo|%>
 
- </li>
-<%end%>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">standup_reject
+            <span class="pull-right">
+              <a class="btn btn-warning" href="/photos/<%= photo.id %>/Edit">Edit ✎</a>
+              <a class="btn btn-danger" href="/photos/<%= photo.id %>/destroy">Destroy ✄</a>
+              <a class="btn btn-primary" href="#">Like ♡</a>
+            </span>
+          </h3>
+          <div style="clear:both;"></div>
+        </div>
+        <div class="panel-body">
+          <img src="<%= photo.image_url%>" alt="">
+        </div>
+        <div class="panel-footer"><%= photo.caption %></div>
+      </div>
+      <%end%>
+    </div>
+  </div>
+</div>
