@@ -1,21 +1,24 @@
 <a href="/shop"></a>
 <a href="/photos/destroy"></a>
 <a =href="#"></a>
-
-<div class="row">
-  <% Item.all.each do |item|%>
-  <div class="col-sm-6 col-md-2">
-    <div class="thumbnail">
-      <img src="/<%= item.image_url %>" alt="Shirt 1">
-      <div class="caption">
-        <h3><%= item.title %></h3>
-        <p>$<%= item.cost %> (SALE!)</p>
-        <p><%=item.description%></p>
-        <p><%= item.sale %>% OFF!</p>
-        <p><a href="#" class="btn btn-primary btn-lg btn-block" role="button">ADD TO CART</a></p>
-        <a class="btn btn-danger" href="/items/<%= item.id %>/destroy">Destroy ✄</a>
+<div class="container">
+  <div class="row">
+    <% Item.all.each do |item|%>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="/<%= item.image_url %>" alt="Shirt 1">
+        <div class="caption">
+          <h3><%= item.title %></h3>
+          <p>$<%= item.cost %> (SALE!)</p>
+          <p><%=item.description%></p>
+          <p><%= item.sale %>% OFF!</p>
+          <p><a href="/sold-out" class="btn btn-primary btn-lg btn-block" role="button">ADD TO CART</a></p>
+          <a class="btn btn-danger" href="/items/<%= item.id %>/destroy">Destroy ✄</a>
+          <a class="btn btn-warning" href="/items/<%= item.id %>/edit">Edit ✎</a>
+        </div>
       </div>
     </div>
+    <%end%>
   </div>
-  <%end%>
+
 </div>

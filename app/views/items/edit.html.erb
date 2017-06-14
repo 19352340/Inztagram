@@ -1,0 +1,20 @@
+<h1>Edit product</h1>
+<form action="/items/<%= @item.id %>/update">
+  <!-- TITLE -->
+  <label for="title">Item title</label>
+  <input type="text" id="title" name="title" value="<%= @item.title%>">
+  <!-- FILE -->
+  <label for="image_url">File</label>
+  <input type="text" id="image_url" name="image_url" value="<%= @item.image_url%>">
+  <!-- DESCRIPTION -->
+  <label for="description">Description(Just write online exclusive)</label>
+  <input type="text" id="description" name="description" value="<%= @item.description%>">
+  <!-- COST -->
+  <label for="cost">Price/Cost(DOLLAR SIGN ALREADY INCLUDED)</label>
+  <input type="text" id="cost" name="cost" value="<%= @item.cost%>">
+  <!-- SALE -->
+  <label for="sale">Sale amount</label>
+  <input type="integer" id="sale" name="sale" value="<%= @item.sale%>">
+  <!-- SUBMIT -->
+  <input type="submit" >
+</form>

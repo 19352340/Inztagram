@@ -12,4 +12,7 @@ get('/shop', {:controller => 'items', :action => 'shop'})
 get('/newmerch', {:controller => 'items', :action => 'new'})
 get('/create_item', {:controller => 'items', :action => 'create'})
 get('/items/:id/destroy', {:controller => 'items', :action => 'destroy'})
+get('/items/:id/edit', {:controller => 'items', :action => 'edit'})
+get('/items/:id/update', {:controller => 'items', :action => 'update'})
+get('/sold-out', {:controller => 'items', :action => 'show'})
 end
