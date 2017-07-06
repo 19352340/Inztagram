@@ -15,4 +15,8 @@ get('/items/:id/destroy', {:controller => 'items', :action => 'destroy'})
 get('/items/:id/edit', {:controller => 'items', :action => 'edit'})
 get('/items/:id/update', {:controller => 'items', :action => 'update'})
 get('/sold-out', {:controller => 'items', :action => 'show'})
+get('/contact/verify', {:controller => 'contact', :action => 'verify'})
+get('/contact/info', {:controller => 'contact', :action => 'enter'})
+get('/contact/rate', {:controller => 'contact', :action => 'rate'})
+get('/contact/solve', {:controller => 'contact', :action => 'solve'})
 end
