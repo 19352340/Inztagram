@@ -1,9 +1,19 @@
 <h1>How annoyingly similar to you is your problem?</h1>
 <form action="/contact/solve">
   <!-- HUMAN VERIFICATION -->
-  <label for="title">Enter the words on the right</label>
-  <img src="/VERIFICATION.png" style="width:304px;height:228px;">
-  <input type="text" id="title" name="title" value="">
+  <label for="title">Rate your problem on a scale from 1 to 10.</label>
+  <select name="rateSelect" class="form-control">
+        <option>1 eh not that bothered</option>
+        <option>2 you are kind of weird</option>
+        <option>3 what are you</option>
+        <option>4 oh you're a human - irritating</option>
+        <option>5 i honestly do not like you</option>
+        <option>6 you are getting very annoying</option>
+        <option>7 i hate you</option>
+        <option>8 i really really really really really really really really don't like you.</option>
+        <option>9 You are so annoying people who dropped out of school want to become scientists to build a portal and send you to another dimension.</option>
+        <option>10 u suck </option>
+      </select>
   <!-- SUBMIT BUTTON -->
-  <button type="button" class="btn btn-primary">Verify ✔︎</button>
+  <button type="submit" class="btn btn-primary">Rate</button>
 </form>
